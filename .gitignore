@@ -1,4 +1,6 @@
 *.log
 *.pot
 *.pyc
+settings_local.py
+django-trunk/
 local_settings.py
