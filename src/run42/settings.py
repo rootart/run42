@@ -97,6 +97,7 @@ TEMPLATE_DIRS = (
 
 PROJECT_APPS = (
     'users',
+    'workouts',
 )
 
 INSTALLED_APPS = (
@@ -107,6 +108,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'interval',
 ) + PROJECT_APPS
 
 LOGGING = {
