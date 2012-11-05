@@ -1,3 +1,9 @@
+import os, sys
+
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+sys.path.append(os.path.join(PROJECT_PATH, 'apps'),)
+
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -17,6 +23,9 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+
+AUTH_USER_MODEL = 'users.User'
 
 TIME_ZONE = 'America/Chicago'
 
@@ -86,6 +95,10 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+PROJECT_APPS = (
+    'users',
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -94,7 +107,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-)
+) + PROJECT_APPS
 
 LOGGING = {
     'version': 1,
