@@ -25,3 +25,15 @@ class Workout(models.Model):
         return str(self.duration)
 
 
+class Lap(models.Model):
+    workout = models.ForeignKey(Workout)
+    distance = models.PositiveIntegerField(_('Lap disnace'))
+    duration = IntervalField(format='HMSX')
+
+    class Meta:
+        verbose_name = _('Lap')
+        verbose_name_plural = _('Laps')
+
+
+    def __unicode__(self):
+        return str(self.duration)
