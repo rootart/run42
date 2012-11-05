@@ -22,6 +22,6 @@ class Workout(models.Model):
         verbose_name_plural = _('Workouts')
 
     def __unicode__(self):
-        return self.duration
+        return str(self.duration)
 
 
